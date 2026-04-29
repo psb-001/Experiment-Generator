@@ -1,0 +1,326 @@
+:root {
+    /* Red and Yellow Design System */
+    --primary: #da291c; /* Red */
+    --primary-active: #b01e0a;
+    --primary-hover: #9d2211;
+    --accent: #fff200; /* Yellow */
+    --accent-dark: #f6e500;
+    --ink: #ffffff;
+    --body: #969696;
+    --body-strong: #ffffff;
+    --body-on-light: #181818;
+    --muted: #666666;
+    --muted-soft: #8f8f8f;
+    --hairline: #303030;
+    --hairline-on-light: #d2d2d2;
+    --hairline-soft: #ebebeb;
+    --canvas: #1a1a1a; /* Dark background */
+    --canvas-elevated: #2a2a2a;
+    --canvas-light: #ffffff;
+    --surface-card: #2a2a2a;
+    --surface-soft-light: #f7f7f7;
+    --surface-strong-light: #ebebeb;
+    --on-primary: #ffffff;
+    --on-dark: #ffffff;
+    --on-light: #181818;
+    --gradient-primary: linear-gradient(135deg, #da291c 0%, #ff6b35 100%);
+    --gradient-accent: linear-gradient(135deg, #fff200 0%, #ffaa00 100%);
+    
+    /* Spacing - following the 8px token ladder */
+    --spacing-xxxs: 4px;   /* xxxs */
+    --spacing-xxs: 8px;    /* xxs */
+    --spacing-xs: 16px;    /* xs */
+    --spacing-sm: 24px;    /* sm */
+    --spacing-md: 32px;    /* md */
+    --spacing-lg: 48px;    /* lg */
+    --spacing-xl: 64px;    /* xl */
+    --spacing-xxl: 96px;   /* xxl */
+    --spacing-super: 128px;/* super */
+    
+    /* Border Radius */
+    --rounded-none: 0px;
+    --rounded-xs: 2px;
+    --rounded-sm: 4px;
+    --rounded-md: 6px;
+    --rounded-lg: 8px;
+    --rounded-xl: 12px;
+    --rounded-full: 9999px;
+    
+    /* Typography */
+    /* Assuming FerrariSans is not available, using system fallbacks */
+    --font-family-display: 'FerrariSans', -apple-system, system-ui, sans-serif;
+    --font-family-body: 'FerrariSans', -apple-system, system-ui, sans-serif;
+    
+    /* Font sizes from DESIGN.md */
+    --font-size-display-mega: 80px;
+    --font-size-display-xl: 56px;
+    --font-size-display-lg: 36px;
+    --font-size-display-md: 26px;
+    --font-size-title-md: 18px;
+    --font-size-title-sm: 16px;
+    --font-size-body-md: 14px;
+    --font-size-body-sm: 13px;
+    --font-size-caption: 12px;
+    --font-size-caption-uppercase: 11px;
+    --font-size-button: 14px;
+    --font-size-nav-link: 13px;
+    --font-size-number-display: 80px;
+    
+    /* Font weights from DESIGN.md */
+    --font-weight-display: 500;
+    --font-weight-title-md: 700;
+    --font-weight-title-sm: 500;
+    --font-weight-body: 400;
+    --font-weight-body-sm: 400;
+    --font-weight-capital: 400;
+    --font-weight-caption: 400;
+    --font-weight-caption-uppercase: 600;
+    --font-weight-button: 700;
+    --font-weight-nav-link: 600;
+    --font-weight-number-display: 700;
+    
+    /* Letter spacing from DESIGN.md */
+    --letter-spacing-display-mega: -1.6px;
+    --letter-spacing-display-xl: -1.12px;
+    --letter-spacing-display-lg: -0.36px;
+    --letter-spacing-display-md: 0.195px;
+    --letter-spacing-title-md: 0px;
+    --letter-spacing-title-sm: 0.08px;
+    --letter-spacing-body-md: 0px;
+    --letter-spacing-body-sm: 0px;
+    --letter-spacing-caption: 0px;
+    --letter-spacing-caption-uppercase: 1.1px;
+    --letter-spacing-button: 1.4px;
+    --letter-spacing-nav-link: 0.65px;
+    --letter-spacing-number-display: -1.6px;
+    
+    /* Additional variables needed */
+    --text-md: var(--font-size-body-md);
+    --spacing-xss: var(--spacing-xxxs);
+}
+
+/* Fix for the undefined variable */
+:root {
+    --text-md: var(--font-size-body-md);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181818;
+    color: #ffffff;
+    font-family: -apple-system, system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--canvas);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 96px 48px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.36px;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.subtitle {
+    text-align: center;
+    color: #969696;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+}
+
+/* Fix for the undefined variable */
+:root {
+    --spacing-xss: var(--spacing-xxxs);
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #181818;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    font-family: -apple-system, system-ui, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    height: 48px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #fff200;
+}
+
+input[readonly] {
+    background-color: var(--canvas-elevated);
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #da291c;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 14px 32px;
+    font-family: -apple-system, system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    height: 48px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 24px;
+}
+
+.btn-primary:hover {
+    background-color: #9d2211;
+}
+
+.btn-primary:active {
+    background-color: #b01e0a;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 64px 48px;
+    text-align: center;
+    border-top: 1px solid #303030;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.footer-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #969696;
+    opacity: 1;
+    transition: fill 0.2s ease;
+}
+
+.footer-icon:hover svg {
+    fill: #fff200;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 13px;
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 12px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        letter-spacing: -0.2px;
+    }
+    
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 40px;
+    }
+    
+    label {
+        font-size: 10px;
+    }
+    
+    input[type="text"],
+    select {
+        font-size: 13px;
+        height: 44px;
+    }
+    
+    .btn-primary {
+        height: 44px;
+        font-size: 13px;
+    }
+    
+    footer {
+        padding: 48px 24px;
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 22px;
+    }
+    
+    input[type="text"],
+    select {
+        font-size: 12px;
+    }
+}
