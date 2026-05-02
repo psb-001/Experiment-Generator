@@ -1,23 +1,24 @@
-
-## Experiment 1: Write a C program to declare and initialize variables of different data types and display their sizes 
+## Experiment 1: Write a C program to declare and initialize variables of different data types and display their sizes
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>          // Header file for input-output functions
 
 int main()
 {
-    int a = 10;
-    float b = 5.5;
-    double d = 20.12345;
-    char c = 'A';
+    // Declaration and initialization of variables of different data types
+    int a = 10;             // Integer variable
+    float b = 5.5;          // Float (decimal) variable
+    double d = 20.12345;    // Double (high precision decimal) variable
+    char c = 'A';           // Character variable
 
-    printf("Integer value = %d, Size = %lu bytes\n", a, sizeof(a));
-    printf("Float value = %f, Size = %lu bytes\n", b, sizeof(b));
-    printf("Double value = %lf, Size = %lu bytes\n", d, sizeof(d));
-    printf("Character value = %c, Size = %lu bytes\n", c, sizeof(c));
+    // Displaying values and their sizes using sizeof() operator
+    printf("Integer value = %d, Size = %lu bytes\n", a, sizeof(a));    // %d for integer, %lu for size (unsigned long)
+    printf("Float value = %f, Size = %lu bytes\n", b, sizeof(b));      // %f for float values
+    printf("Double value = %lf, Size = %lu bytes\n", d, sizeof(d));    // %lf for double values
+    printf("Character value = %c, Size = %lu bytes\n", c, sizeof(c)); // %c for character values
 
-    return 0;
+    return 0;               // Indicates successful execution of program
 }
 
 Output:
@@ -29,35 +30,39 @@ Character value = A, Size = 1 bytes
 
 ==========================================================================================================================================================
 
-## Experiment 2: Implement arithmetic, relational, and logical operations in C programs and display the results 
+## Experiment 2: Implement arithmetic, relational, and logical operations in C programs and display the results
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>          // Header file for input-output functions
 
 int main()
 {
+    // Declaration and initialization
     int a = 10, b = 5;
 
+    // Arithmetic Operations
     printf("Arithmetic Operations:\n");
-    printf("Addition = %d\n", a + b);
-    printf("Subtraction = %d\n", a - b);
-    printf("Multiplication = %d\n", a * b);
-    printf("Division = %d\n", a / b);
-    printf("Modulus = %d\n\n", a % b);
+    printf("Addition = %d\n", a + b);          // Adds a and b
+    printf("Subtraction = %d\n", a - b);        // Subtracts b from a
+    printf("Multiplication = %d\n", a * b);     // Multiplies a and b
+    printf("Division = %d\n", a / b);           // Divides a by b
+    printf("Modulus = %d\n\n", a % b);          // Remainder of division
 
+    // Relational Operations
     printf("Relational Operations:\n");
-    printf("a > b = %d\n", a > b);
-    printf("a < b = %d\n", a < b);
-    printf("a == b = %d\n", a == b);
-    printf("a != b = %d\n\n", a != b);
+    printf("a > b = %d\n", a > b);             // Checks if a is greater than b
+    printf("a < b = %d\n", a < b);             // Checks if a is less than b
+    printf("a == b = %d\n", a == b);           // Checks equality
+    printf("a != b = %d\n\n", a != b);         // Checks inequality
 
+    // Logical Operations
     printf("Logical Operations:\n");
-    printf("(a > b && b > 0) = %d\n", (a > b && b > 0));
-    printf("(a < b || b > 0) = %d\n", (a < b || b > 0));
-    printf("!(a > b) = %d\n", !(a > b));
+    printf("(a > b && b > 0) = %d\n", (a > b && b > 0));   // AND condition
+    printf("(a < b || b > 0) = %d\n", (a < b || b > 0));   // OR condition
+    printf("!(a > b) = %d\n", !(a > b));                    // NOT condition
 
-    return 0;
+    return 0;               // Indicates successful execution of program
 }
 
 Output:
@@ -82,50 +87,52 @@ Logical Operations:
 
 ==========================================================================================================================================================
 
-
-## Experiment 3:  Write a C program to implement various control flow statements such as if-else, switch-case, and loops, to solve a given problem 
+## Experiment 3: Write a C program to implement various control flow statements such as if-else, switch-case, and loops, to solve a given problem
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>          // Header file for input-output functions
 
 int main()
 {
     int num, choice, i;
 
+    // Input a number
     printf("Enter a number: ");
-    scanf("%d", &num);
+    scanf("%d", &num);          // Read number from user
 
-    if (num % 2 == 0)
+    // IF-ELSE: Check even or odd
+    if (num % 2 == 0)           // If remainder is 0, number is even
         printf("Number is Even\n");
     else
         printf("Number is Odd\n");
 
+    // SWITCH-CASE: Menu
     printf("\nMenu:\n1. Square\n2. Cube\n");
     printf("Enter your choice: ");
-    scanf("%d", &choice);
+    scanf("%d", &choice);       // Read menu choice from user
 
     switch(choice)
     {
         case 1:
-            printf("Square = %d\n", num * num);
+            printf("Square = %d\n", num * num);         // Calculate and print square
             break;
         case 2:
-            printf("Cube = %d\n", num * num * num);
+            printf("Cube = %d\n", num * num * num);     // Calculate and print cube
             break;
         default:
-            printf("Invalid Choice\n");
+            printf("Invalid Choice\n");                  // Handle invalid input
     }
 
+    // LOOP: Print numbers from 1 to num
     printf("\nNumbers from 1 to %d:\n", num);
-    for(i = 1; i <= num; i++)
+    for(i = 1; i <= num; i++)   // Loop from 1 up to num
     {
-        printf("%d ", i);
+        printf("%d ", i);       // Print each number
     }
 
-    return 0;
+    return 0;                   // Indicates successful execution of program
 }
-
 
 Output:
 
@@ -143,34 +150,39 @@ Numbers from 1 to 5:
 
 ==========================================================================================================================================================
 
-
-## Experiment 4: Create a function in C to calculate the factorial of a given number and display the result  
+## Experiment 4: Create a function in C to calculate the factorial of a given number and display the result
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>              // Header file for input-output functions
 
+// Function to calculate factorial
 int factorial(int n)
 {
     int i, fact = 1;
+    // Loop to calculate factorial
     for(i = 1; i <= n; i++)
     {
-        fact = fact * i;
+        fact = fact * i;        // Multiply numbers from 1 to n
     }
-    return fact;
+    return fact;                // Return computed factorial result
 }
 
 int main()
 {
     int num, result;
 
+    // Taking input from user
     printf("Enter a number: ");
-    scanf("%d", &num);
+    scanf("%d", &num);          // Read number from user
 
+    // Calling factorial function
     result = factorial(num);
+
+    // Display result
     printf("Factorial of %d = %d", num, result);
 
-    return 0;
+    return 0;                   // Indicates successful execution of program
 }
 
 Output:
@@ -180,17 +192,19 @@ Factorial of 6 = 720
 
 ==========================================================================================================================================================
 
-
-## Experiment 5:Write a program to find the sum of digits of a number using recursion
+## Experiment 5: Write a program to find the sum of digits of a number using recursion
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>              // Header file for input-output functions
 
+// Recursive function to find sum of digits
 int sumDigits(int n)
 {
+    // Base condition: stop recursion when n reaches 0
     if(n == 0)
         return 0;
+    // Recursive call: extract last digit and add to sum of remaining digits
     return (n % 10) + sumDigits(n / 10);
 }
 
@@ -198,15 +212,18 @@ int main()
 {
     int num, result;
 
+    // Input number
     printf("Enter a number: ");
-    scanf("%d", &num);
+    scanf("%d", &num);          // Read number from user
 
-    result = sumDigits(num);
+    // Function call
+    result = sumDigits(num);    // Store the returned sum of digits
+
+    // Display result
     printf("Sum of digits = %d", result);
 
-    return 0;
+    return 0;                   // Indicates successful execution of program
 }
-
 
 Output:
 
@@ -215,33 +232,35 @@ Sum of digits = 10
 
 ==========================================================================================================================================================
 
-## Experiment 6:Develop a program to print the Fibonacci series using a loop
+## Experiment 6: Develop a program to print the Fibonacci series using a loop
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>              // Header file for input-output functions
 
 int main()
 {
     int n, i;
-    int a = 0, b = 1, c;
+    int a = 0, b = 1, c;       // a and b are the first two terms; c holds next computed term
 
+    // Input number of terms
     printf("Enter number of terms: ");
-    scanf("%d", &n);
+    scanf("%d", &n);            // Read number of terms from user
 
+    // Print first two terms
     printf("Fibonacci Series: %d %d", a, b);
 
-    for(i = 3; i <= n; i++)
+    // Loop to generate remaining terms
+    for(i = 3; i <= n; i++)    // Start from 3rd term as first two are already printed
     {
-        c = a + b;
-        printf(" %d", c);
-        a = b;
-        b = c;
+        c = a + b;              // Calculate next term by adding previous two
+        printf(" %d", c);       // Print the next term
+        a = b;                  // Shift a forward to b's value
+        b = c;                  // Shift b forward to newly computed term
     }
 
-    return 0;
+    return 0;                   // Indicates successful execution of program
 }
-
 
 Output:
 
@@ -250,27 +269,27 @@ Fibonacci Series: 0 1 1 2 3 5
 
 ==========================================================================================================================================================
 
-## Experiment 7: Write a C program to initialize and display elements of a one-dimensional array 
+## Experiment 7: Write a C program to initialize and display elements of a one-dimensional array
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>              // Header file for input-output functions
 
 int main()
 {
+    // Declare and initialize array with 5 elements
     int arr[5] = {10, 20, 30, 40, 50};
-    int i;
+    int i;                      // Loop variable for traversal
 
+    // Display array elements using loop
     printf("Array elements are:\n");
-
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < 5; i++)     // Iterate from index 0 to 4
     {
-        printf("arr[%d] = %d\n", i, arr[i]);
+        printf("arr[%d] = %d\n", i, arr[i]);    // Print index and corresponding element
     }
 
-    return 0;
+    return 0;                   // Indicates successful execution of program
 }
-
 
 Output:
 
@@ -283,44 +302,50 @@ arr[4] = 50
 
 ==========================================================================================================================================================
 
-
 ## Experiment 8: Implement a program to find the largest and smallest elements in an array
 
 ### Code:
 
-#include <stdio.h>
+#include <stdio.h>              // Header file for input-output functions
 
 int main()
 {
-    int arr[100], n, i;
-    int max, min;
+    int arr[100], n, i;         // Array of max 100 elements, n for count, i for loop
+    int max, min;               // Variables to store largest and smallest values
 
+    // Input number of elements
     printf("Enter number of elements: ");
-    scanf("%d", &n);
+    scanf("%d", &n);            // Read count from user
 
+    // Input array elements
     printf("Enter %d elements:\n", n);
     for(i = 0; i < n; i++)
     {
-        scanf("%d", &arr[i]);
+        scanf("%d", &arr[i]);   // Read each element into the array
     }
 
+    // Initialize max and min with the first element
     max = min = arr[0];
 
-    for(i = 1; i < n; i++)
+    // Find largest and smallest
+    for(i = 1; i < n; i++)     // Compare each element starting from index 1
     {
         if(arr[i] > max)
-            max = arr[i];
-
+        {
+            max = arr[i];       // Update max if a larger element is found
+        }
         if(arr[i] < min)
-            min = arr[i];
+        {
+            min = arr[i];       // Update min if a smaller element is found
+        }
     }
 
+    // Display results
     printf("Largest element = %d\n", max);
     printf("Smallest element = %d\n", min);
 
-    return 0;
+    return 0;                   // Indicates successful execution of program
 }
-
 
 Output:
 
