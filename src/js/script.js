@@ -19,6 +19,21 @@
     if (saved.branch)      branchEl.value = saved.branch;
     if (saved.rollNumber)  rollEl.value   = saved.rollNumber;
 
+    // Track footer link clicks with GoatCounter
+    document.querySelectorAll('.footer-social-link, .footer-psb-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.goatcounter && window.goatcounter.count) {
+                const href = this.href;
+                const label = this.getAttribute('aria-label') || this.textContent.trim() || 'footer-link';
+                window.goatcounter.count({
+                    path:  `footer-click/${encodeURIComponent(label)}`,
+                    title: `Footer Click — ${label}`,
+                    event: true
+                });
+            }
+        });
+    });
+
     // Keyboard shortcut: Ctrl+Enter / Cmd+Enter submits the form
     document.addEventListener('keydown', function(e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
